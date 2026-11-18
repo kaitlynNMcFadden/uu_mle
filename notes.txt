@@ -1,0 +1,27 @@
+survival lab
+-------------
+- at first, people might assume that everyone dies, but that is imputing that they will die
+- next wrong step, throwing out all the people that passed away, but then you are throwing away certain results
+- so what do you do,
+    - if you died during the study: take the logs of the time they lived for the likelihood (the first LL)
+    - if you survivied the study: take the prob that you exceed that time of the end of the study, 1-p people (second LL)
+        - this second one is called the right censored likelihood (survival data)
+
+could just do the prob of people who survivied and those who don't, but it won't help
+us decide which therapy would be better, or any other non-straightforward questions
+
+example:
+- 2 choices: a consistent probability of death but its uncertain, or live 3 years and die
+- in this world, we want a good model to figure out the prob of when people will die 
+
+overview:
+- we have 2 different LL functions for 2 different groups, people who died and those who did not die
+- we have a combination of the 2 
+- the code should still be good for referencing the code portions
+
+count data
+-------------
+- according to the normal, the mean is the average is 1.9 kids, but you cannot have 1.9 kids or negative kids (from the variance),
+so normal is not a great model for this data
+- what about logit, not great either
+- want Poission
